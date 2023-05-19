@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff1D1E22),
+        backgroundColor: const Color(0xff1D1E22),
         title: const Text('RETROFIT'),
         centerTitle: true,
       ),
@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
           return _posts(posts);
         }
         else{
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }
@@ -41,8 +41,8 @@ class Home extends StatelessWidget {
       itemCount: posts.length,
       itemBuilder: (context,index) {
         return Container(
-          margin: EdgeInsets.all(16),
-          padding: EdgeInsets.all(16),
+          margin: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
@@ -58,7 +58,7 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 10,),
               Text(
-                posts[index].title
+                posts[index].body,
               )
             ],
           ),
